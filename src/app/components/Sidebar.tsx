@@ -22,7 +22,7 @@ export default function SideBar({ cart, setCart, setShowSidebar, showSidebar }: 
             </Header>
             <CardContainer>
             {cart.map((product) => (
-                <SidebarCard cart={cart} setCart={setCart} product={product} />
+                <SidebarCard key={product.id} cart={cart} setCart={setCart} product={product} />
             ))}
             </CardContainer>
             <Total><h1>Total:</h1> <h1> R$ {cart.reduce((acc, product) => acc + (Number(product.price)* product.quantity), 0)}</h1>

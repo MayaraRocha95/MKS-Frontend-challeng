@@ -39,7 +39,7 @@ export default function Store({ cart, setCart}: StoreProps) {
     return (
         <Container>
             {products.map((product) => (
-          <Card cart={cart} setCart={setCart} product={product}/>
+          <Card key={product.id} cart={cart} setCart={setCart} product={product}/>
             ))}
         </Container>
     );
